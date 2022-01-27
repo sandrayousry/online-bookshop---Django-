@@ -1,4 +1,4 @@
-{% extends 'bookstore-templates/dashboard.html'  %}
+{% extends 'bookstore-templates/dashboard.html' %}
 
 {% block content %}
 
@@ -7,10 +7,10 @@
 
 <div class="container pb-5">
   <div class="row">
-<br>
+    <br>
 
     <div class="col">
-     Total Orders  : {{t_orders}}
+      Total Orders : {{t_orders}}
     </div>
     <div class="col">
       Pending : {{p_orders}}
@@ -27,69 +27,69 @@
     <div class="col">
       Out of order: {{out_orders}}
     </div>
-    
+
   </div>
 </div>
 
 
 <div class="col">
-    <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Orders</h5>
-          <h6 class="card-subtitle mb-2 text-muted"><a href="{% url 'create'%}" class="btn btn-success">Create</a></h6>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Orders</h5>
+      <h6 class="card-subtitle mb-2 text-muted"><a href="{% url 'create'%}" class="btn btn-success">Create</a></h6>
 
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Date</th>        
-                <th scope="col">user</th>
-                <th scope="col">Book</th>
-                <th scope="col">Status</th>
-                <th scope="col">Action</th>
-
-                
-               
-                
-               
-              </tr>
-            </thead>
-            <tbody>
-             
-                {% for item in orders%}
-                 <tr>
-                <td>{{item.date_created}}</td>
-                <td>{{item.customer}}</td>
-                <td>{{item.book}}</td>
-                <td>{{item.status}}</td>
-
-                  
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">user</th>
+            <th scope="col">Book</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
 
 
 
 
 
+          </tr>
+        </thead>
+        <tbody>
 
-                <td>
-                    <a class="p-2" href="{% url 'update' item.id %}" ><i class="fas fa-edit"></i></a>
-                    <a class="text-danger" href="{% url 'delete' item.id %}"><i class="fas fa-trash-alt"></i></a>
-                </td>
-
-
-
-
-
-                 </tr>
-                {% endfor %}
+          {% for item in orders%}
+          <tr>
+            <td>{{item.date_created}}</td>
+            <td>{{item.customer}}</td>
+            <td>{{item.book}}</td>
+            <td>{{item.status}}</td>
 
 
-              
-    
-            </tbody>
-          </table>
 
-        </div>
-      </div>
+
+
+
+
+
+            <td>
+              <a class="p-2" href="{% url 'update' item.id %}"><i class="fas fa-edit"></i></a>
+              <a class="text-danger" href="{% url 'delete' item.id %}"><i class="fas fa-trash-alt"></i></a>
+            </td>
+
+
+
+
+
+          </tr>
+          {% endfor %}
+
+
+
+
+        </tbody>
+      </table>
+
+    </div>
   </div>
+</div>
 </div>
 {% endblock %}

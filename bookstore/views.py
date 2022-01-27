@@ -6,7 +6,7 @@ from django.http import HttpResponse, request
 # Create your views here.
 # user => urls => views => templetes
 #                 views => model
-                    
+#               
 # view responsible for rendering templates
 from .models import *
 from .forms import Orderform ,CreateNewUser, ProfileInfo

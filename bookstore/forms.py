@@ -13,7 +13,6 @@ class Orderform(ModelForm):
          fields = "__all__"
 
 
-
 class CreateNewUser(UserCreationForm):
      class Meta:
          model = User 

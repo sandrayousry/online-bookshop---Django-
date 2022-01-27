@@ -19,7 +19,6 @@ from django.contrib import admin
 # 3shan a5le any 2 files yshofo b3dhm
 from django.urls import path, include
 
-
 from django.conf.urls.static import static
 from django.conf import settings
 

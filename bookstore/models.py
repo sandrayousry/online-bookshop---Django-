@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 # aro7 ll admin.py a3ml import lkol asmaa altabels 3shan ysm3o fel admin
 # self m3naha an al function de tab3a ll class da
 
+
     # kol user hwa customer
 class Customer(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
