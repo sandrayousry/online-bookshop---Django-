@@ -9,6 +9,7 @@ def notloggedUsers(view_func):
             return view_func(request, *args,**kwargs)  
     return wrapper_func         
 
+
 # diffrantiate betw. admin and users
   # lazm ykon aluser gwa group either admin or customer
 def allowedUsers(allowedGroups=[]):

@@ -11,7 +11,6 @@ from django.contrib.auth.models import User
 
     # kol user hwa customer
 class Customer(models.Model):
-
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=190, null=True)
     email = models.CharField(max_length=190, null=True)

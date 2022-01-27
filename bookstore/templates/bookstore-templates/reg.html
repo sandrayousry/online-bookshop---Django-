@@ -8,7 +8,16 @@
   <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
  <!-- font awesome -->
  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+ <h4>press login 
+  to test as admin
+  username : sandra
+  password : 123
+ </h4>
+ <h4>
+  to test as cutomer
+  username : kimi
+  password : sandra#123
+ </h4>
   <div class="containerForm">
 <form method="POST" action="">
     {% csrf_token %}
@@ -44,14 +53,7 @@
     <button class="regLogin"><a href="{% url 'login' %}">Login page</a></button>
 
     </div>
-    press login 
-    to test as admin
-    username : sandra
-    password : 123
-    
-    to test as cutomer
-    username : kimi
-    password : sandra#123
+
 
   </form>
   </div>

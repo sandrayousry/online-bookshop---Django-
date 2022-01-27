@@ -123,7 +123,7 @@ def delete(request,pk):
     # form = UserCreationForm(request.POST)
     # if form.is_valid():
     #     form.save()
-@notloggedUsers
+
 def reg(request):
     # if request.user.is_authenticated:
     #     return redirect('home')
