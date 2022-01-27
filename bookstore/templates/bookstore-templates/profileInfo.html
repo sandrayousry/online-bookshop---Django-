@@ -1,0 +1,29 @@
+{% extends 'bookstore-templates/dashboard.html'  %}
+
+{% block content %}
+
+
+<h1>User Info </h1>
+<div class="container">
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{request.user.customer.avatar.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+
+
+      <form method="post" action="" enctype="multipart/form-data">
+        <div class="form-group">
+          {% csrf_token %}
+          {{form.as_p}}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

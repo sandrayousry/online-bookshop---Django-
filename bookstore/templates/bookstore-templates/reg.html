@@ -1,0 +1,58 @@
+{% load static %}
+
+
+<div class="regBackground">
+<h1 class="regTitle">Register</h1>
+
+
+  <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+ <!-- font awesome -->
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <div class="containerForm">
+<form method="POST" action="">
+    {% csrf_token %}
+    <!-- {{ form.as_p }} -->
+<div class="labelInput">
+        <div class="label"> {{form.username.label}} </div>
+        <span>
+        <i class="fa fa-user" ></i>
+        <div class="input">{{form.username}} </div>
+      </span>
+    
+    
+        <br>
+
+    <div class="label">{{form.email.label}}</div>
+    <div class="input">{{form.email}}</div>
+    <br>
+
+    <div class="label">{{form.password1.label}}</div>
+    <div class="input">{{form.password1}}</div>
+    <br>
+
+    <div class="label">{{form.password2.label}}</div>
+    <div class="input">{{form.password2}}</div> 
+   <br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    
+    <br>
+    {{form.errors}}
+    <br>
+    <button class="regLogin"><a href="{% url 'login' %}">Login page</a></button>
+
+    </div>
+    press login 
+    to test as admin
+    username : sandra
+    password : 123
+    
+    to test as cutomer
+    username : kimi
+    password : sandra#123
+
+  </form>
+  </div>
+</div>

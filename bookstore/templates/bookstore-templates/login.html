@@ -1,0 +1,79 @@
+<!-- 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Login page</h1>
+    <hr class="my-4">
+    
+  </div>
+  <form method="POST" action="">
+    {% csrf_token %}
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input name="password" type="text" class="form-control" >
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% for msg in messages %}
+   <h4>{{msg}}</h4>
+    {% endfor %}
+
+</div>
+
+<h2> username:test</h2>
+<h2>email:test@gmail.com</h2>
+<h2> password:123sandra</h2>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+
+ <!-- font awesome -->
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<!-- <div class="regBackground"> -->
+  <form method="POST" action="">
+<div class="containerForm"> 
+
+  <h1 class="regTitle">Login</h1>
+  {% csrf_token %}
+
+<div class="loginInput">
+    <div class="mb-3" >
+      <span>
+        <i class="fa fa-user"></i>
+      <!-- <label for="exampleInputEmail1" class="form-label">Username</label> -->
+      <input type="text" name="username" class="form-control"  placeholder="Username">
+    </span>
+    </div>
+
+    <div class="mb-3">
+      <span>
+        <i class="fa fa-lock"></i>
+      <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+      <input name="password" type="password" class="form-control" placeholder="Password" >
+    </span>
+    </div>
+
+ 
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  {% for msg in messages %}
+ <h4>{{msg}}</h4>
+  {% endfor %}
+</div>
+</div>
+</div>
+to test as admin
+username : sandra
+password : 123
+
+to test as cutomer
+username : kimi
+password : sandra#123

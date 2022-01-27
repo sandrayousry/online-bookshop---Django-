@@ -1,0 +1,14 @@
+{% include 'bookstore-templates/navbar.html' %}
+
+{% load static %}
+{% block content %}
+<form action="" method="POST">
+  <!-- for protection -->
+  {% csrf_token %}
+  <!-- from views -->
+  {{form}}
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  {% endblock %}  

@@ -1,0 +1,72 @@
+{% extends 'bookstore-templates/dashboard.html'  %}
+
+{% block content %}
+
+<h1 class="p-5">Customer</h1>
+
+<div class="container pb-5">
+  <div class="row">
+    <div class="col">
+ 
+      <a href="#">Create order</a>
+      </div>
+      </div>   
+      
+      
+      <form  method="GET">
+        {{filter.form}}
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+</div> 
+<div class="container pb-5">
+    <div class="row">
+      <div class="col">
+       Full Name : {{customers.name}}
+      </div>
+
+      <div class="col">
+        E-mail : {{customers.email}}
+      </div>
+
+      <div class="col">
+        Phone No. : {{customers.phone}}
+      </div>
+
+      <div class="col">
+        Number Of Orders : {{order_count}}
+      </div>
+      
+    </div>
+  </div>
+
+<div class="container">
+    <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Book</th>
+            <th scope="col">Category</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for item in orders %}
+            <tr>
+           <td>{{item.book}}</td>
+           <td>{{item.book.category}}</td>
+           <td>{{item.date_created}}</td>
+           <td>{{item.status}}</td>
+           <td>
+            <a class="p-2" href="{% url 'update' item.id %}"><i class="fas fa-edit"></i></a>
+            <a class="text-danger" href="{% url 'delete' item.id %}"><i class="fas fa-trash-alt"></i></a>
+           </td>
+            </tr>
+           {% endfor %}
+        </tbody>
+      </table> 
+</div>
+
+
+{% endblock %}

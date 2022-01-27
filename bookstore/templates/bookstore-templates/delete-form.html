@@ -1,0 +1,16 @@
+{% include 'bookstore-templates/navbar.html' %}
+{% load static %}
+{% block content %}
+
+<h3>Are you sure ?</h3>
+<form action="" method="POST">
+    <a class="btn btn-primary" href=" {% url 'home' %} ">Return</a>
+  <!-- for protection -->
+  {% csrf_token %}
+  <!-- from views -->
+
+  
+    <button type="submit" class="btn btn-info">Yes</button>
+  </form>
+
+  {% endblock %}  

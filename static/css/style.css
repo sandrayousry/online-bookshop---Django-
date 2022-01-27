@@ -1,0 +1,95 @@
+body{
+   height: 100vh;
+   width: 100%;
+   background-image: linear-gradient(45deg,#4dd47d,#d682d6 , #32a4a8,#d9d148 );
+
+}
+
+
+.containerForm{
+width: 380px;
+margin:5% auto;
+border-radius: 25px;
+background-color: rgba(0, 0, 0, 0.1);
+height: 350px;
+}
+
+.regTitle {
+text-align: center;
+padding-top: 40px;
+
+}
+.regTitle h1{
+font-size: 45px;
+margin-bottom: 80px;
+}
+
+.labelInput {
+height:150px;
+border: none;
+outline: none;
+padding-left: 40px;
+box-sizing: border-box;
+margin-bottom: 40px; 
+letter-spacing: 2px;
+}
+ button{
+     padding-left: 0px;
+    letter-spacing: 2px;
+    /* margin-left: 30px; */
+    width: 250px;
+    height: 30px;
+    background-color: cornflowerblue;
+}
+
+.regLogin{
+    background: rgb(117, 120, 131);
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+ }
+
+/* login page */
+.loginInput{
+    text-align: center;
+}
+.loginInput  input , button{
+
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    margin-bottom: 40px; 
+    letter-spacing: 2px;
+    }
+    .labelInput span{
+        position: relative;
+        
+    }
+    .labelInput i{
+        position:absolute;
+        left: 15px;
+        font-size: 16px;
+        top: 2px;
+    }
+
+   .labelInput button:hover{
+       box-shadow: 2px 2px 5px #555;
+       background-color: #7799d4;
+   }
+
+   .labelInput input:hover{
+    box-shadow: 2px 2px 5px #555;
+    background-color: #ddd;
+}
+
+
+
+
+
+
+
+
+
